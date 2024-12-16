@@ -1,5 +1,5 @@
-const API_KEY_ALPHAVANTAGE = '999YHL0UUTT27WPN'; // Substitua pela sua chave válida
-const API_KEY_FINNHUB = 'ctg63apr01qn78n34co0ctg63apr01qn78n34cog'; // Substitua pela sua chave válida
+const API_KEY_ALPHAVANTAGE = '999YHL0UUTT27WPN';
+const API_KEY_FINNHUB = 'ctg63apr01qn78n34co0ctg63apr01qn78n34cog';
 const paresMoedas = ['EUR', 'GBP'];
 const simbolosAcoes = ['AAPL', 'TSLA', 'AMZN', 'META', 'GOOG'];
 const API_COINGECKO = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false';
@@ -28,9 +28,7 @@ async function atualizarMoedas() {
                 `;
             }
         }
-    } catch (error) {
-        console.error('Erro ao carregar cotações de moedas:', error.message);
-    }
+    } catch (error) { }
 }
 
 async function atualizarCriptomoedas() {
@@ -51,9 +49,7 @@ async function atualizarCriptomoedas() {
                 </tr>
             `;
         });
-    } catch (error) {
-        console.error('Erro ao carregar criptomoedas:', error.message);
-    }
+    } catch (error) { }
 }
 
 async function atualizarAcoes() {
@@ -77,9 +73,7 @@ async function atualizarAcoes() {
                 `;
             }
         }
-    } catch (error) {
-        console.error('Erro ao carregar cotações de ações:', error.message);
-    }
+    } catch (error) { }
 }
 
 function iniciarAtualizacao() {
